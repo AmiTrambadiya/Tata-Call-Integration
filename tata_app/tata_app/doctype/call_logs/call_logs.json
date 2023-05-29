@@ -80,6 +80,7 @@
   {
    "fieldname": "agent_name",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "Agent Name"
   },
   {
@@ -95,6 +96,7 @@
   {
    "fieldname": "client_number",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "Client Number"
   },
   {
@@ -155,7 +157,7 @@
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-27 12:00:43.265012",
+ "modified": "2023-05-29 13:39:25.353337",
  "modified_by": "Administrator",
  "module": "tata_app",
  "name": "Call Logs",
