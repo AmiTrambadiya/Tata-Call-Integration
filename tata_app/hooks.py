@@ -32,7 +32,11 @@ app_license = "MIT"
 # include js in doctype views
 # doctype_js = {"Lead" : "public/js/todo.js" ,"Customer" : "public/js/todo.js"}
 # doctype_js = {"Opportunity" : "public/js/todo.js"}
-doctype_js = {"Supplier" : "public/js/supplier.js","Lead" : "public/js/lead_css.js", "Customer" : "public/js/customer_css.js", "Opportunity" : "public/js/todo.js"}
+doctype_js = {"Supplier": "public/js/supplier.js",
+              "Lead": "public/js/lead_css.js",
+              "Item": "public/js/item.js",
+              "Customer": "public/js/customer_css.js",
+              "Opportunity": "public/js/todo.js"}
 # doctype_js = {"Customer" : "public/js/customer_css.js"}
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -99,7 +103,7 @@ doctype_js = {"Supplier" : "public/js/supplier.js","Lead" : "public/js/lead_css.
 # ---------------
 # Override standard doctype classes
 override_doctype_class = {
-	"Opportunity": "tata_app.api.Opportunity"
+    "Opportunity": "tata_app.api.Opportunity"
 }
 # override_doctype_class = {
 #	"ToDo": "custom_app.overrides.CustomToDo"
@@ -121,26 +125,26 @@ override_doctype_class = {
 # ---------------
 
 scheduler_events = {
-    "call_log" : {
-        "* * * * *" :[
+    "call_log": {
+        "* * * * *": [
             "tata_app.api.call_log"
         ]
-    },    
-#	"all": [
-#		"tata_app.tasks.all"
-#	],
-#	"daily": [
-#		"tata_app.tasks.daily"
-#	],
-#	"hourly": [
-#		"tata_app.tasks.hourly"
-#	],
-#	"weekly": [
-#		"tata_app.tasks.weekly"
-#	],
-#	"monthly": [
-#		"tata_app.tasks.monthly"
-#	],
+    },
+    #	"all": [
+    #		"tata_app.tasks.all"
+    #	],
+    #	"daily": [
+    #		"tata_app.tasks.daily"
+    #	],
+    #	"hourly": [
+    #		"tata_app.tasks.hourly"
+    #	],
+    #	"weekly": [
+    #		"tata_app.tasks.weekly"
+    #	],
+    #	"monthly": [
+    #		"tata_app.tasks.monthly"
+    #	],
 }
 
 # Testing

@@ -350,57 +350,57 @@ def click_to_call(agent_number,destination_number):
 	response = requests.post(url, json=payload, headers=headers)
 	print(response.text)
 
-# @frappe.whitelist()
-# def fetch_api_rc(vehicle_no):
-#     # print(vehicle_no)
-#     # print(name1)
-#     url = "https://api.emptra.com/vehicleSearchLite2"
+@frappe.whitelist()
+def fetch_api_rc(vehicle_no):
+    # print(vehicle_no)
+    # print(name1)
+    url = "https://api.emptra.com/vehicleSearchLite2"
 
-#     payload = {
-#         "vehicleNumber": vehicle_no
-#     }
-#     headers = {
-#         "Content-Type": "application/json",
-#         "clientId": "f8d5a944621c40166802c96fe33e8e6f:2d832ad2e5cd0f0eb6529b0ec33dbc49",
-#         "secretKey": "9rEi2MMRJVn58TDMOjWVxdK1scfu7vv2nKIOW4kpYWgcN1PcZClcEZm0Uk1vwD4DB"
-#     }
+    payload = {
+        "vehicleNumber": vehicle_no
+    }
+    headers = {
+        "Content-Type": "application/json",
+        "clientId": "f8d5a944621c40166802c96fe33e8e6f:2d832ad2e5cd0f0eb6529b0ec33dbc49",
+        "secretKey": "9rEi2MMRJVn58TDMOjWVxdK1scfu7vv2nKIOW4kpYWgcN1PcZClcEZm0Uk1vwD4DB"
+    }
 
-#     response = requests.post(url, json=payload, headers=headers)
-#     print(response.status_code)
-#     offical=response.json()
-#     # print(offical)
-#     # print(type(offical))
-#     # print(len(offical))
-#     if offical['code']==103:
-#         print("Wrong Vehicle Number Please Check and Type Again....")
-#         return "error"
-#     else:
-#         license=offical['result']['license']
-#         registration_date=offical['result']['registration_date']
-#         fuel_type=offical['result']['fuel_type']
-#         present_address=offical['result']['present_address']
-#         vehicle_color=offical['result']['vehicle_color']
-#         full_chassis=offical['result']['full_chassis']
-#         owner_name=offical['result']['owner']
-#         engine=offical['result']['engine']
-#         vehicle_class=offical['result']['vehicle_class']
-#         maker_model=offical['result']['maker_model']
-#         owner_count=offical['result']['owner_count']
-#         insurance_date=offical['result']['insurance_date']
-#         insurer_name=offical['result']['insurer_name']
-#         insurance_policy_no=offical['result']['insurance_policy_no']
-#         pollution=offical['result']['pollution']
-#         fitness_dt_no_format=offical['result']['fitness_dt']
-#         is_blacklisted=offical['result']['is_blacklisted']
-#         model=offical['result']['model']
-#         financier_name=offical['result']['financier_name']
-#         manufacturing_date=offical['result']['manufacturing_date']
-#         registration_authority=offical['result']['registration_authority']
-#         vehicle_weight=offical['result']['vehicle_weight']
-#         seating_capacity=offical['result']['seating_capacity']
-#         permanent_address=offical['result']['permanent_address']
-#         norms_type=offical['result']['norms_type']
-#         return license, registration_date, fuel_type, present_address, vehicle_color, full_chassis, owner_name, engine, vehicle_class, maker_model, owner_count, insurance_date, insurer_name, insurance_policy_no, pollution, fitness_dt_no_format, is_blacklisted, model, financier_name, manufacturing_date, registration_authority, vehicle_weight, seating_capacity,permanent_address, norms_type
+    response = requests.post(url, json=payload, headers=headers)
+    print(response.status_code)
+    offical=response.json()
+    # print(offical)
+    # print(type(offical))
+    # print(len(offical))
+    if offical['code']==103:
+        print("Wrong Vehicle Number Please Check and Type Again....")
+        return "error"
+    else:
+        license=offical['result']['license']
+        registration_date=offical['result']['registration_date']
+        fuel_type=offical['result']['fuel_type']
+        present_address=offical['result']['present_address']
+        vehicle_color=offical['result']['vehicle_color']
+        full_chassis=offical['result']['full_chassis']
+        owner_name=offical['result']['owner']
+        engine=offical['result']['engine']
+        vehicle_class=offical['result']['vehicle_class']
+        maker_model=offical['result']['maker_model']
+        owner_count=offical['result']['owner_count']
+        insurance_date=offical['result']['insurance_date']
+        insurer_name=offical['result']['insurer_name']
+        insurance_policy_no=offical['result']['insurance_policy_no']
+        pollution=offical['result']['pollution']
+        fitness_dt_no_format=offical['result']['fitness_dt']
+        is_blacklisted=offical['result']['is_blacklisted']
+        model=offical['result']['model']
+        financier_name=offical['result']['financier_name']
+        manufacturing_date=offical['result']['manufacturing_date']
+        registration_authority=offical['result']['registration_authority']
+        vehicle_weight=offical['result']['vehicle_weight']
+        seating_capacity=offical['result']['seating_capacity']
+        permanent_address=offical['result']['permanent_address']
+        norms_type=offical['result']['norms_type']
+        return license, registration_date, fuel_type, present_address, vehicle_color, full_chassis, owner_name, engine, vehicle_class, maker_model, owner_count, insurance_date, insurer_name, insurance_policy_no, pollution, fitness_dt_no_format, is_blacklisted, model, financier_name, manufacturing_date, registration_authority, vehicle_weight, seating_capacity,permanent_address, norms_type
         
 
 class Opportunity(TransactionBase, CRMNote):
